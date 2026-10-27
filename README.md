@@ -1,4 +1,4 @@
-# cocon-legal
+# gazouille-legal
 
 Pages légales de l'application **Gazouille**, publiées via GitHub Pages.
 
