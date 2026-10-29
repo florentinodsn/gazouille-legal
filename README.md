@@ -6,6 +6,7 @@ Ce dépôt est public uniquement pour que GitHub Pages serve la page
 gratuitement. Il ne contient aucun code de l'application.
 
 - `index.html` — politique de confidentialité
+- `support/index.html` — page d'aide, URL de support de la fiche App Store
 - `CNAME` — domaine personnalisé servi par GitHub Pages (`legal.gazouille.cloud`)
 
 La source de référence reste `legal/politique-de-confidentialite.md` dans le

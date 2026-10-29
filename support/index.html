@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aide — Gazouille</title>
+<meta name="description" content="Aide et contact de l'application Gazouille.">
+<style>
+  :root {
+    --bg: #fdfcfa;
+    --fg: #23201d;
+    --muted: #6b645d;
+    --rule: #e6e1da;
+    --accent: #8a6f4e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1816;
+      --fg: #ece8e3;
+      --muted: #a39b92;
+      --rule: #33302c;
+      --accent: #c9a77a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1816;
+    --fg: #ece8e3;
+    --muted: #a39b92;
+    --rule: #33302c;
+    --accent: #c9a77a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 16px 5rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .updated { color: var(--muted); font-size: .875rem; margin: 0 0 2.5rem; }
+  h2 {
+    font-size: 1.0625rem;
+    margin: 2.5rem 0 .75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    letter-spacing: -.005em;
+  }
+  h3 { font-size: .9375rem; margin: 1.5rem 0 .4rem; color: var(--accent); }
+  p, li { margin: 0 0 .75rem; }
+  ul { padding-left: 1.25rem; }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9375rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  .contact {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-radius: .5rem;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .contact p { margin: .25rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aide et contact</h1>
+  <p class="updated">Application Gazouille</p>
+
+  <div class="contact">
+    <p><strong>Une question, un problème ?</strong> Écrivez-nous à <a href="mailto:contact@gazouille.cloud">contact@gazouille.cloud</a>.</p>
+    <p>Pour un problème technique, indiquez le modèle de votre iPhone et sa version d'iOS.</p>
+  </div>
+
+  <h2>Mot de passe oublié</h2>
+  <p>Sur l'écran de connexion, touchez <strong>Mot de passe oublié ?</strong> et suivez le lien reçu par email.</p>
+
+  <h2>Changer d'iPhone</h2>
+  <p>Connectez-vous avec le même compte sur le nouvel appareil. Vos données de santé sont chiffrées, et la clé qui permet de les lire passe d'un appareil à l'autre par le <strong>trousseau iCloud</strong> : vérifiez qu'il est activé dans Réglages → votre nom → iCloud → Mots de passe et trousseau.</p>
+  <p>Si le trousseau iCloud était désactivé et que l'ancien iPhone n'est plus disponible, les données de santé ne peuvent plus être déchiffrées, par personne, nous compris.</p>
+
+  <h2>Les rappels n'arrivent pas</h2>
+  <p>Vérifiez que les notifications de Gazouille sont autorisées dans Réglages → Notifications → Gazouille, puis choisissez les rappels voulus depuis l'icône de profil de l'application.</p>
+
+  <h2>Utiliser l'application hors ligne</h2>
+  <p>Tout fonctionne sans réseau. Vos saisies sont envoyées dès que la connexion revient.</p>
+
+  <h2>Retirer votre consentement santé</h2>
+  <p>Depuis l'application : <strong>icône de profil → Compte → Retirer mon consentement santé</strong>. Les données de santé sont alors effacées définitivement. Le détail figure dans la <a href="/">politique de confidentialité</a>.</p>
+
+  <h2>Supprimer votre compte</h2>
+  <p>Depuis l'application : <strong>icône de profil → Compte → Supprimer mon compte</strong>. La suppression est immédiate et définitive, sans démarche auprès de nous.</p>
+
+  <footer>Gazouille — <a href="/">politique de confidentialité</a></footer>
+</main>
+</body>
+</html>
