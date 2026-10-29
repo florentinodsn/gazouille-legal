@@ -67,21 +67,21 @@
 <body>
 <main>
   <h1>Politique de confidentialité</h1>
-  <p class="updated">Application Gazouille — dernière mise à jour le 15 octobre 2026</p>
+  <p class="updated">Application Gazouille — dernière mise à jour le 29 octobre 2026</p>
 
-  <div class="contact" id="contact">
+  <div class="contact">
     <p><strong>Responsable du traitement :</strong> Florentino Da Silva Neves</p>
     <p><strong>Contact :</strong> <a href="mailto:contact@gazouille.cloud">contact@gazouille.cloud</a></p>
   </div>
 
   <h2>1. Ce que fait Gazouille</h2>
-  <p>Gazouille est une application de suivi quotidien pour parents de nourrissons : repas, sommeil, santé, stock. Les données sont partagées entre les adultes d'un même foyer, et uniquement entre eux.</p>
+  <p>Gazouille est une application de suivi quotidien pour parents de nourrissons : repas, sommeil, santé, stock. Les données d'un foyer ne sont accessibles qu'aux comptes membres de ce foyer.</p>
 
   <h2>2. Données que nous traitons</h2>
   <h3>Compte</h3>
   <ul>
     <li>Adresse email et mot de passe. Le mot de passe est stocké sous forme de condensat par notre hébergeur, jamais en clair.</li>
-    <li>Nom d'affichage.</li>
+    <li>Nom d'affichage, tiré par défaut de votre adresse email.</li>
   </ul>
   <h3>Foyer</h3>
   <ul>
@@ -90,56 +90,93 @@
   <h3>Enfant</h3>
   <p>Ces données sont saisies par vous, au sujet de votre enfant.</p>
   <ul>
-    <li>Prénom, date de naissance, sexe, photo si vous en ajoutez une.</li>
-    <li>Repas (type, quantité, horaire), sessions de sommeil, changes.</li>
-    <li>Mesures de croissance : poids, taille, périmètre crânien.</li>
-    <li>Rendez-vous médicaux et suivi du calendrier vaccinal.</li>
+    <li>Prénom, date de naissance, sexe.</li>
   </ul>
-  <p>Ces informations constituent des <strong>données de santé</strong>. Elles ne servent qu'à afficher le suivi dans l'application, et ne sont transmises à aucun tiers à des fins commerciales.</p>
-  <h3>Stock</h3>
-  <p>Produits suivis, quantités, consommation.</p>
-
-  <h2>3. Données stockées sur votre appareil</h2>
+  <h3>Suivi de l'enfant</h3>
+  <p>Saisi par vous également.</p>
   <ul>
-    <li>Un cache local (SQLite) contenant une copie des données ci-dessus, pour que l'application fonctionne hors ligne.</li>
+    <li>Repas : type, quantité, horaire.</li>
+    <li>Sommeil : début et fin de chaque période.</li>
+    <li>Mesures : poids, taille, périmètre crânien, température.</li>
+    <li>Rendez-vous médicaux : motif, date, lieu, praticien.</li>
+    <li>Examens et vaccins effectués.</li>
+    <li>Aliments introduits et réactions constatées.</li>
+  </ul>
+  <p>Ces informations constituent des <strong>données de santé</strong>. Chez un nourrisson, les repas et le sommeil en font partie au même titre que les mesures : ce sont des marqueurs de son développement.</p>
+  <h3>Stock</h3>
+  <p>Produits suivis, quantités, baisses de stock. Les baisses de stock de lait infantile renseignent indirectement sur les quantités consommées : elles sont traitées comme des données de santé.</p>
+  <p>Aucune de ces données n'est transmise à un tiers, ni utilisée à une autre fin que l'affichage du suivi dans l'application.</p>
+
+  <h2>3. Pourquoi nous avons le droit de les traiter</h2>
+  <table>
+    <thead><tr><th>Données</th><th>Base légale</th></tr></thead>
+    <tbody>
+      <tr><td>Compte et authentification</td><td>Exécution du contrat — article 6(1)(b) du RGPD</td></tr>
+      <tr><td>Données de santé de votre enfant</td><td>Votre <strong>consentement explicite</strong>, en tant que titulaire de l'autorité parentale — article 9(2)(a) du RGPD</td></tr>
+    </tbody>
+  </table>
+  <p>Ce consentement est recueilli à la création du compte, par une case <strong>distincte</strong> de l'acceptation des conditions d'utilisation, jamais pré-cochée. Il est enregistré avec la version du texte que vous avez acceptée.</p>
+
+  <h2>4. Retirer votre consentement</h2>
+  <p>Vous pouvez retirer votre consentement à tout moment, depuis l'application : <strong>icône de profil → Compte → Retirer mon consentement santé</strong>.</p>
+  <p>Le retrait <strong>efface immédiatement et définitivement</strong> les mesures, la température, les rendez-vous médicaux, le suivi vaccinal, les repas, le sommeil et les aliments introduits, sur nos serveurs comme sur votre appareil. Le foyer, les fiches de vos enfants et le stock sont conservés.</p>
+  <p>Le retrait ne remet pas en cause le traitement effectué auparavant. Nous conservons la trace de votre consentement et de son retrait, sans aucune donnée de santé, afin de pouvoir démontrer l'un et l'autre.</p>
+
+  <h2>5. Chiffrement de bout en bout</h2>
+  <p>Les données de santé décrites au point 2 sont <strong>chiffrées sur votre appareil avant tout envoi</strong> (AES-256-GCM). La clé qui permet de les lire est conservée dans le trousseau de votre iPhone, et synchronisée entre vos appareils par le trousseau iCloud si vous l'avez activé. Elle ne nous est jamais transmise.</p>
+  <p><strong>Ni nous ni notre hébergeur ne pouvons lire ces données.</strong> Restent lisibles sur nos serveurs, parce qu'ils sont nécessaires au fonctionnement : les identifiants techniques, le rattachement de chaque donnée à un foyer et à un enfant, le prénom, la date de naissance et le sexe de l'enfant, le nom du foyer, ainsi que le nom et la quantité des produits suivis.</p>
+  <p><strong>Contrepartie : personne ne peut restaurer une clé perdue, nous pas davantage.</strong> Si vous avez désactivé le trousseau iCloud et perdez votre iPhone, vos données de santé deviennent définitivement illisibles. L'application vous en avertit à la création du compte.</p>
+
+  <h2>6. Données stockées sur votre appareil</h2>
+  <ul>
+    <li>Un cache local (SQLite) qui contient une copie lisible des données ci-dessus, pour que l'application fonctionne hors ligne. Il est protégé par le chiffrement de l'appareil appliqué par iOS, et peut être inclus dans la sauvegarde iCloud de votre iPhone, sous votre compte Apple.</li>
     <li>Vos préférences de notification et l'état des guides que vous avez masqués.</li>
     <li>Un instantané partagé avec le widget d'écran d'accueil, dans un groupe d'applications accessible seulement à Gazouille.</li>
   </ul>
-  <p>Désinstaller l'application efface ces données locales. Cela n'efface ni votre compte ni les données de votre foyer sur le serveur.</p>
+  <p>Le cache local et l'instantané du widget sont effacés à la déconnexion. Désinstaller l'application efface ces données locales ; cela n'efface ni votre compte ni les données de votre foyer sur le serveur.</p>
 
-  <h2>4. Notifications</h2>
+  <h2>7. Notifications</h2>
   <p>Les rappels — fenêtres d'éveil, repas, rendez-vous, stock bas — sont <strong>programmés localement sur votre appareil</strong>. Aucun service de notification push tiers n'est utilisé, et aucune de ces données ne quitte l'appareil pour les produire.</p>
 
-  <h2>5. Sous-traitants et transferts</h2>
+  <h2>8. Sous-traitants et transferts</h2>
   <table>
     <thead><tr><th>Destinataire</th><th>Rôle</th><th>Localisation</th></tr></thead>
     <tbody>
       <tr><td>Supabase</td><td>Hébergement de la base de données et de l'authentification</td><td>Union européenne (Irlande)</td></tr>
-      <tr><td>Google Fonts</td><td>Téléchargement de la police Nunito au premier lancement</td><td>États-Unis</td></tr>
     </tbody>
   </table>
-  <p>L'appel à Google Fonts transmet votre adresse IP à Google. Il ne contient aucune donnée de votre compte ni de votre enfant.</p>
+  <p><strong>Supabase est notre unique sous-traitant.</strong> L'application n'adresse aucune requête à un autre serveur : les polices de caractères sont embarquées, et les rappels sont programmés sur votre appareil. Aucune donnée n'est transférée hors de l'Union européenne.</p>
   <p>Nous n'utilisons <strong>aucun outil de mesure d'audience, aucun traceur publicitaire et aucun SDK d'analyse</strong>.</p>
 
-  <h2>6. Durée de conservation</h2>
-  <p>Vos données sont conservées tant que votre compte existe. À la suppression du compte, elles sont effacées comme décrit ci-dessous.</p>
+  <h2>9. Durée de conservation</h2>
+  <table>
+    <thead><tr><th>Données</th><th>Durée</th></tr></thead>
+    <tbody>
+      <tr><td>Données du foyer</td><td>Tant que votre compte existe</td></tr>
+      <tr><td>Données de santé, après retrait du consentement</td><td>Effacement immédiat</td></tr>
+      <tr><td>Toutes vos données, après suppression du compte</td><td>Effacement immédiat, selon les règles du point 10</td></tr>
+      <tr><td>Trace du consentement et de son retrait</td><td>Conservée à titre de preuve, effacée avec le compte</td></tr>
+    </tbody>
+  </table>
 
-  <h2>7. Supprimer votre compte</h2>
+  <h2>10. Supprimer votre compte</h2>
   <p>Depuis l'application : <strong>icône de profil → Compte → Supprimer mon compte</strong>. La suppression est immédiate et définitive ; elle ne passe par aucune démarche auprès de nous.</p>
   <p>Ce qui est supprimé dépend de votre foyer :</p>
   <ul>
     <li><strong>Vous êtes seul dans votre foyer</strong> — le foyer, les fiches de vos enfants et tout l'historique (repas, sommeil, santé, stock) sont effacés.</li>
     <li><strong>D'autres adultes partagent votre foyer</strong> — votre compte est effacé, mais le foyer et son historique restent accessibles aux autres membres, car ces données sont aussi les leurs. Les entrées que vous aviez saisies y demeurent, sans plus aucun lien avec votre identité. Si vous étiez le seul propriétaire, un autre membre le devient afin que le foyer reste gérable.</li>
   </ul>
-  <p>Dans les deux cas, le cache local et les données affichées par le widget d'écran d'accueil sont effacés de l'appareil.</p>
+  <p>Dans les deux cas, le cache local, les données affichées par le widget d'écran d'accueil et votre clé de chiffrement sont effacés de l'appareil.</p>
 
-  <h2>8. Vos droits</h2>
-  <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité sur vos données. Vous pouvez les exercer en écrivant à l'adresse de contact indiquée en tête de ce document. Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr">CNIL</a>.</p>
+  <h2>11. Vos droits</h2>
+  <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité sur vos données, ainsi que du droit de retirer votre consentement (point 4). Vous pouvez les exercer en écrivant à l'adresse de contact indiquée en tête de ce document.</p>
+  <p>Vos données de santé étant chiffrées sur votre appareil, nous ne les détenons pas sous une forme lisible : elles se consultent, se corrigent et s'effacent depuis l'application.</p>
+  <p>Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr">CNIL</a>.</p>
 
-  <h2>9. Enfants</h2>
-  <p>Gazouille n'est pas destinée à être utilisée par des enfants. Les données concernant votre enfant sont saisies par vous, adulte responsable, et vous en gardez le contrôle.</p>
+  <h2>12. Enfants</h2>
+  <p>Gazouille n'est pas destinée à être utilisée par des enfants. Les données concernant votre enfant sont saisies par vous, titulaire de l'autorité parentale, et vous en gardez le contrôle.</p>
 
-  <h2>10. Modifications</h2>
+  <h2>13. Modifications</h2>
   <p>Toute modification de cette politique sera publiée à cette adresse, avec une nouvelle date de mise à jour.</p>
 
   <footer>Gazouille — politique de confidentialité</footer>
